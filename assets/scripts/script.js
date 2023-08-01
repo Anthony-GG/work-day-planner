@@ -1,11 +1,13 @@
 
-
+$(function () {
 
   //Dummy spots filled in array, leaving open spots for the given day schedule
   var events = ["event1", "event2", "event3", "event4", "event5", "event6", "event7", "event8", "event9", "", "", "", "", "", "", "", "", "", "", ""];
   //parses local storage for saved events list
   var savedEvents = JSON.parse(localStorage.getItem("savedEvents"));
-
+  if (savedEvents == null){
+    savedEvents = events;
+  }
   //PURPOSE: saved the given text to localStorage to persist on the page even after refreshes
   //PARAMETERS: a click on any 'save' button
   //RETURNS: NONE
@@ -71,4 +73,4 @@
     var currentDateTime = moment().format("MMMM Do YYYY, h:mm:ss a");
     $("#currentDay").text(currentDateTime);
   }
-
+});
