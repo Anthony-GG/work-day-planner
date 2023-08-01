@@ -31,6 +31,9 @@ The following images shows the web application's appearance and functionality:
 <br>
  Editing of code done by myself, <b>Anthony Iacano</b>
  <br>
+ Javascript Libraries used: JQuery, MomentJS
+ <br>
+ CSS Framework used: Bootstrap 
  <br>
  Lesson provided by <b>edX Boot Camps LLC.</b>
 
