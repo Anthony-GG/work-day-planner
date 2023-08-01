@@ -17,11 +17,9 @@ $(function () {
     console.log($(this).prev("textarea").val());
     console.log($(this).prev("textarea"));
     $(this).prev("textarea").val('');
-    $('#hour-9').removeClass("row time-block past")
-    $('#hour-9').addClass("row time-block present")
-    
   });
-  
+
+//Initially sets the time section colors and setInterval continues to call the function every minute
   setScheduleColor();
   setInterval(setScheduleColor, 60000)
 //PURPOSE: updates the colors of the different time sections based on the current real world time
@@ -40,13 +38,8 @@ $(function () {
       $("#hour-" + i).removeClass()
       $("#hour-"+ i).addClass("row time-block past");
     }
+  }
 }
-  console.log("It has been one minute!");
-}
-
-
-
-
 
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
