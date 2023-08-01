@@ -1,5 +1,5 @@
 
-$(function () {
+
 
   //Dummy spots filled in array, leaving open spots for the given day schedule
   var events = ["event1", "event2", "event3", "event4", "event5", "event6", "event7", "event8", "event9", "", "", "", "", "", "", "", "", "", "", ""];
@@ -71,4 +71,4 @@ $(function () {
     var currentDateTime = moment().format("MMMM Do YYYY, h:mm:ss a");
     $("#currentDay").text(currentDateTime);
   }
-});
+
