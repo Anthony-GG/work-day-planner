@@ -2,13 +2,15 @@
 
 ## Description
 
-1. In this challenge, my main goal was to create a Work Day Planner that would span an entire workday (9am to 5pm) and as the day progresses, would change the color of the different sections to correspond with the given time. In addition, within each section the user would be able to input and save events within the webpage so that they will persist upon refresh.
+1. In this challenge, my main goal was to create a Work Day Planner that would span an entire workday (9am to 5pm) and as the day progresses, would change the color of the different sections to correspond with the given time (Gray for the ast, red for the present and green for the future). In addition, within each section the user would be able to input and save events within the webpage so that they will persist upon refresh.
 
 2. In this project, I practiced using third party libraries, DOM traversal with third-party libraries,implementing datetime functionality within an application and allowing dynamic updates via setInterval() and setTimeout()!
 
 3. I found that reusuing the same colors from a previous project to update the color scheme proved very useful! Chances to recycle concepts from previous projects seems integral in some instances to further build upon chances to learn.
 
 4. Adding and removing classes to allow color change to occur seemed like a very fun concept, rather than directly changing the CSS directly for each section one by one.
+
+5. It was fantastic to create and see realtime changes naturally occuring on the page rather than the static pages I have worked with thus far!
 
 ## Installation and Usage
 
@@ -24,6 +26,22 @@ The following images shows the web application's appearance and functionality:
 <img src="./assets/images/work-day-planner-filled-out.png" width="750px" alt="home menu of webpage with various sections filled out with activities, consisting of setting up a Minecraft Server and going out to breakfast! ">
 <img src="./assets/images/work-day-planner-saved-indicator.png" width="750px" alt="a screenshot showing the SAVED prompt appearing before it shortly disappears, the prompt lets the user know that the input has been saved">
 <img src="./assets/images/work-day-planner-empty.png" width="750px" height="1000px" alt="an example of the webpage with all of the sections left empty">
+
+## Changelog:
+
+```
+* Updated and adjusted CSS to better represent the project and for accessability concerns.
+
+* Adjusted heading to include a current datetime below the description of the page.
+
+* Added sections for 12 o'clock to 5 o' clock. (Prev. 9 o' clock to 11 o' clock)
+
+* Added color changing functionality based on given time of day: gray for past, red for present, and green for future.
+
+* Added ability to save event inputs to local storage so they persist upon refresh.
+
+* Added notification to show when information is saved!
+```
 
 ## Credits
 <br>
