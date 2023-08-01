@@ -12,12 +12,42 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
+  //Dummy spots filled in array, leaving open spots for the given day schedule
+  var events = ["event1", "event2", "event3", "event4", "event5", "event6", "event7", "event8", "event9", "", "", "", "", "", "", "", "", "", "", ""];
+  //parses local storage for saved events list
+  var savedEvents = JSON.parse(localStorage.getItem("savedEvents"));
+
+  //PURPOSE: saved the given text to localStorage to persist on the page even after refreshes
+  //PARAMETERS: a click on any 'save' button
+  //RETURNS: NONE
   $(".saveBtn").click(function(){
-    console.log("button pressed, value: ")
-    console.log($(this).prev("textarea").val());
-    console.log($(this).prev("textarea"));
-    $(this).prev("textarea").val('');
+    //selects content and content position
+    content = $(this).prev("textarea").val();
+    position = $(this).parent().attr("id").slice(5);
+    currentSection = $(this).prev("textarea");
+
+    //saves content to array in given position and updates the savedEvents which is then saved in local storage
+    events[Number(position)] = content;
+    savedEvents = JSON.stringify(events)
+    localStorage.setItem("savedEvents", savedEvents)
+    
+    //gives user indication of being 'saved' via popup that appears and then disappears
+    currentSection.val('SAVED');
+    currentSection.css("color", "#2E9CFB")
+    setTimeout(function(){
+      currentSection.val(content);
+      currentSection.css("color", "black")
+    }, 2000);
   });
+
+
+
+  setEvents();
+  function setEvents() {
+    for (var i = 9; i < 18; i++) {
+        $("#hour-" + i).find("textarea").val(savedEvents[i]);
+      }
+    }
 
 //Initially sets the time section colors and setInterval continues to call the function every minute
   setScheduleColor();

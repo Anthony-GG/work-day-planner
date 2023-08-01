@@ -18,6 +18,7 @@ textarea {
 
 .description {
   white-space: pre-wrap;
+  color: white;
 }
 
 .time-block {
