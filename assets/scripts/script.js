@@ -33,9 +33,13 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 
+  //Initially sets the datetime at the top of the page and setInterval continues to call the function every second
   update();
   setInterval(update, 1000);
 
+//PURPOSE: updates the datetime at the top of the page
+//PARAMETERS: NONE
+//RETURNS: NONE
   function update() {
     var currentDateTime = moment().format("MMMM Do YYYY, h:mm:ss a");
     $("#currentDay").text(currentDateTime);
