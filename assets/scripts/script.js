@@ -33,11 +33,11 @@ $(function () {
     
     //gives user indication of being 'saved' via popup that appears and then disappears
     currentSection.val('SAVED');
-    currentSection.css("color", "#2E9CFB")
+    currentSection.css("color", "#FDDC74")
     setTimeout(function(){
       currentSection.val(content);
-      currentSection.css("color", "black")
-    }, 2000);
+      currentSection.css("color", "#EEEEEE")
+    }, 1000);
   });
 
 
